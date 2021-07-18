@@ -17,7 +17,8 @@ package.jsonに下記を入力
 ## 依存関係を追加
 依存関係として以下を追加する
 - nuxt(Nuxt.js本体)
-
+- @nuxt/typescript-build
+- @nuxt/types
 ### nuxtを追加
 ```
 $ yarn add nuxt
