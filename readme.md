@@ -35,6 +35,65 @@ $ yarn add nuxt
 yarn dev
 ```
 
+### Nuxt TypeScriptサポートのパッケージを追加
+```
+yarn add --dev @nuxt/typescript-build @nuxt/types
+```
+### Nuxt TypeScriptサポート（設定ファイルなど）
+``nuxt.config.js``内の``buildModules``に``@nuxt/typescript-build``を追加する
+```
+export default {
+  buildModules: ['@nuxt/typescript-build']
+}
+```
+``tsconfig.json``を作成する
+```
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "lib": [
+      "ESNext",
+      "ESNext.AsyncIterable",
+      "DOM"
+    ],
+    "esModuleInterop": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
+    },
+    "types": [
+      "@types/node",
+      "@nuxt/types"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
+
+```
+
+### 型宣言ファイルを作成する
+``types/vue-shim.d.ts``を作成する
+```
+declare module "*.vue" {
+    import Vue from 'vue'
+    export default Vue
+}
+```
+
+
 
 ## 参考
 https://ja.nuxtjs.org/docs/2.x/get-started/installation
