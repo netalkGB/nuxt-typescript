@@ -97,5 +97,5 @@ declare module "*.vue" {
 
 
 ## 参考
-https://ja.nuxtjs.org/docs/2.x/get-started/installation
+https://ja.nuxtjs.org/docs/2.x/get-started/installation  
 https://typescript.nuxtjs.org/ja/guide/setup
