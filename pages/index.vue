@@ -8,7 +8,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { createNamespacedHelpers } from 'vuex'
-import NtButton from '@/components/NtButton'
+import NtButton from '@/components/NtButton.vue'
 
 const { mapActions, mapGetters } = createNamespacedHelpers('counter')
 
