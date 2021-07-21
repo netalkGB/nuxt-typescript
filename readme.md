@@ -19,6 +19,12 @@ package.jsonに下記を入力
 - nuxt(Nuxt.js本体)
 - @nuxt/typescript-build (TypeScriptサポート)
 - @nuxt/types (TypeScriptサポート)
+- jest (jest) [開発依存]
+- @vue/test-utils (jest) [開発依存]
+- vue-jest (jest) [開発依存]
+- ts-jest (jest) [開発依存]
+- @types/jest (jest) [開発依存]
+- babel-core@bridge [開発依存]
 ### nuxtを追加
 ```
 $ yarn add nuxt
@@ -94,8 +100,36 @@ declare module "*.vue" {
 }
 ```
 
-
-
+### jestのセットアップ
+必要なパッケージをインストールする
+```
+yarn add --dev jest @vue/test-utils
+yarn add --dev vue-jest
+yarn add --dev ts-jest @types/jest
+yarn add --dev babel-core@bridge
+```
+package.jsonに下記を追記する
+```
+"jest": {
+  "moduleFileExtensions": [
+    "js",
+    "ts",
+    "vue"
+  ],
+  "transform": {
+    ".*\\.(vue)$": "<rootDir>/node_modules/vue-jest",
+    "^.+\\.tsx$": "<rootDir>/node_modules/ts-jest",
+    "^.+\\.ts$": "<rootDir>/node_modules/ts-jest",
+    "^.+\\.js$": "<rootDir>/node_modules/ts-jest"
+  }
+}
+```
+tsconfig.jsonに下記を追記する
+```
+"types": [
+  "jest"
+]
+```
 ## 参考
 https://ja.nuxtjs.org/docs/2.x/get-started/installation  
 https://typescript.nuxtjs.org/ja/guide/setup
