@@ -140,6 +140,22 @@ tsconfig.jsonに下記を追記する
   "jest"
 ]
 ```
+
+### eslint
+パッケージをインストールする
+```
+yarn add --dev @nuxtjs/eslint-config-typescript
+yarn add --dev eslint
+```
+``.eslintrc.js``に書く
+```
+module.exports = {
+  extends: [
+    '@nuxtjs/eslint-config-typescript'
+  ]
+}
+```
+
 ## 参考
 https://ja.nuxtjs.org/docs/2.x/get-started/installation  
 https://typescript.nuxtjs.org/ja/guide/setup
