@@ -24,7 +24,9 @@ package.jsonに下記を入力
 - vue-jest (jest) [開発依存]
 - ts-jest (jest) [開発依存]
 - @types/jest (jest) [開発依存]
-- babel-core@bridge(jest) [開発依存]
+- babel-core@bridge (jest) [開発依存]
+- jsdom (jest) [開発依存]
+- jsdom-global (jest) [開発依存]
 ### nuxtを追加
 ```
 $ yarn add nuxt
@@ -107,6 +109,7 @@ yarn add --dev jest @vue/test-utils
 yarn add --dev vue-jest
 yarn add --dev ts-jest @types/jest
 yarn add --dev babel-core@bridge
+yarn add --dev jsdom jsdom-global
 ```
 package.jsonに下記を追記する
 ```
@@ -125,7 +128,10 @@ package.jsonに下記を追記する
   "moduleNameMapper": {
     "^@/(.*)$": "<rootDir>/$1",
     "^~/(.*)$": "<rootDir>/$1"
-  }
+  },
+  "setupFilesAfterEnv": [
+    "<rootDir>jest.setup.js"
+  ]
 }
 ```
 tsconfig.jsonに下記を追記する
