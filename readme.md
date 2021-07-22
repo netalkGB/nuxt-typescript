@@ -17,8 +17,8 @@ package.jsonに下記を入力
 ## 依存関係を追加
 依存関係として以下を追加する
 - nuxt(Nuxt.js本体)
-- @nuxt/typescript-build (TypeScriptサポート)
-- @nuxt/types (TypeScriptサポート)
+- @nuxt/typescript-build (TypeScriptサポート) [開発依存]
+- @nuxt/types (TypeScriptサポート) [開発依存]
 - jest (jest) [開発依存]
 - @vue/test-utils (jest) [開発依存]
 - vue-jest (jest) [開発依存]
