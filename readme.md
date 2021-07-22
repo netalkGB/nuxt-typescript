@@ -27,6 +27,8 @@ package.jsonに下記を入力
 - babel-core@bridge (jest) [開発依存]
 - jsdom (jest) [開発依存]
 - jsdom-global (jest) [開発依存]
+- @nuxtjs/eslint-config-typescript (eslint)[開発依存]
+- eslint (eslint)[開発依存]
 ### nuxtを追加
 ```
 $ yarn add nuxt
@@ -157,5 +159,5 @@ module.exports = {
 ```
 
 ## 参考
-https://ja.nuxtjs.org/docs/2.x/get-started/installation  
+https://ja.nuxtjs.org/docs/2.x/get-started/installation
 https://typescript.nuxtjs.org/ja/guide/setup
