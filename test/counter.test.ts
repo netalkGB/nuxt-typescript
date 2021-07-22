@@ -12,4 +12,10 @@ describe('counter', () => {
       expect(store.getters['getCount']).toBe(0)
     })
   })
+  describe('actions', () => {
+    test('increment counter.count equal 1', () => {
+      store.dispatch('increment')
+      expect(store.getters['getCount']).toBe(1)
+    })    
+  })
 })
