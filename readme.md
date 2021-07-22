@@ -24,7 +24,7 @@ package.jsonに下記を入力
 - vue-jest (jest) [開発依存]
 - ts-jest (jest) [開発依存]
 - @types/jest (jest) [開発依存]
-- babel-core@bridge [開発依存]
+- babel-core@bridge(jest) [開発依存]
 ### nuxtを追加
 ```
 $ yarn add nuxt
