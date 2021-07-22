@@ -10,11 +10,11 @@ localVue.use(Vuex)
 describe('index.vue', () => {
   const counter = {
     namespaced: true,
-    actions : {
-      increment: jest.fn(),
+    actions: {
+      increment: jest.fn()
     },
-    getters : {
-      getCount: () => 255,
+    getters: {
+      getCount: () => 255
     }
   }
 

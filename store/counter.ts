@@ -1,7 +1,6 @@
 import { GetterTree, ActionTree, MutationTree } from 'vuex'
-import { RootState } from '~/store'
-
 import { Counter } from '@/store/types/Counter'
+import { RootState } from '~/store'
 
 export const state = () => ({
   counter: {
@@ -16,10 +15,9 @@ export const getters: GetterTree<CounterState, RootState> = {
 }
 
 export const mutations: MutationTree<CounterState> = {
-  increment: (state) => (state.counter.count++)
+  increment: state => (state.counter.count++)
 }
 
 export const actions: ActionTree<CounterState, RootState> = {
   increment: ({ commit }) => commit('increment')
 }
-
