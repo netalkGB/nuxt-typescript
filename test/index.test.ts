@@ -26,7 +26,7 @@ describe('index.vue', () => {
   const wrapper = mount(index, { store, localVue })
   it('has count and button label', () => {
     expect(wrapper.html()).toContain('<div>255</div>')
-    expect(wrapper.html()).toContain('>TEST</')
+    expect(wrapper.html()).toContain('TEST')
   })
 
   it('button click should increment call', async () => {
